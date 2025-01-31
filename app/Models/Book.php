@@ -17,5 +17,7 @@ class Book extends Model {
     public function toReadListUsers() {
         return $this->belongsToMany(User::class, 'toreadlist');
     }
+
+    
 }
 

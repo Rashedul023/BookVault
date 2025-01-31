@@ -15,4 +15,10 @@ class CategoryController extends Controller
         
         return view('home', compact('categories'));
     }
+
+    public function show($id)
+    {
+        $category = Category::with('books')->findOrFail($id);
+        return view('show', compact('category'));
+    }
 }
