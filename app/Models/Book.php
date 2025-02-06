@@ -18,6 +18,12 @@ class Book extends Model {
         return $this->belongsToMany(User::class, 'toreadlist');
     }
 
+    public function favoritedBy()
+    {
+        return $this->belongsToMany(User::class, 'favourites');
+    }
+
+
     
 }
 

@@ -52,6 +52,12 @@ class User extends Authenticatable
     public function toReadList() {
         return $this->belongsToMany(Book::class, 'toreadlist');
     }
+
+    public function favourites()
+    {
+        return $this->belongsToMany(Book::class, 'favourites');
+    }
+
 }
 
 
